@@ -36,24 +36,6 @@
         android:layout_toLeftOf="@+id/activity_main_prezime_edit_text"
         android:text="Prezime" />
 
-    <Button
-        android:id="@+id/activity_main_tipka"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/activity_main_prezime_edit_text"
-        android:layout_marginTop="88dp"
-        android:layout_toRightOf="@+id/activity_main_prezime_textView"
-        android:text="@string/tipka" />
-
-    <Button
-        android:id="@+id/activity_main_tipka2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/activity_main_tipka"
-        android:layout_alignBottom="@+id/activity_main_tipka"
-        android:layout_toRightOf="@+id/activity_main_tipka"
-        android:text="@string/tipka2" />
-
     <TextView
         android:id="@+id/activity_main_adresa_textView"
         android:layout_width="wrap_content"
@@ -79,5 +61,33 @@
         android:layout_below="@+id/activity_main_ime_edit_text"
         android:layout_marginTop="16dp"
         android:ems="10" />
+
+    <Button
+        android:id="@+id/activity_main_tipka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/activity_main_adresa_textView"
+        android:layout_below="@+id/activity_main_adresa_textView"
+        android:layout_marginTop="33dp"
+        android:text="@string/tipka" />
+
+    <Button
+        android:id="@+id/activity_main_tipka2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/activity_main_tipka"
+        android:layout_alignBottom="@+id/activity_main_tipka"
+        android:layout_alignRight="@+id/activity_main_adresa_edit_text"
+        android:layout_marginRight="22dp"
+        android:text="@string/tipka2" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/activity_main_tipka2"
+        android:layout_alignBottom="@+id/activity_main_tipka2"
+        android:layout_toRightOf="@+id/activity_main_tipka"
+        android:text="@string/tipka3" />
     
 </RelativeLayout>

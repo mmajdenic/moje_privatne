@@ -6,6 +6,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="tipka">Submit</string>
     <string name="tipka2">Cancel</string>
+    <string name="tipka3">Dodaj</string>
     <string name="exit">Exit</string>
 
 </resources>

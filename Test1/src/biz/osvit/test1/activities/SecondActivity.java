@@ -1,6 +1,7 @@
 package biz.osvit.test1.activities;
 
 import biz.osvit.test1.R;
+import biz.osvit.test1.models.UserModel;
 import biz.osvit.test1.utils.C;
 
 import android.os.Bundle;
@@ -16,9 +17,7 @@ public class SecondActivity extends BaseActivity {
 	private TextView mTitleAdresa;
 	public Button mExitBtn;
 
-	private String textName;
-	private String textSurname;
-	private String textAdress;
+	private UserModel mUserModel;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -46,16 +45,14 @@ public class SecondActivity extends BaseActivity {
 	}
 
 	private void initExtras(Bundle extras) {
-		textName = extras.getString(C.MAIN_ACTIVITY_BUNDLE_KEY_IME);
-		textSurname = extras.getString(C.MAIN_ACTIVITY_BUNDLE_KEY_PREZIME);
-		textAdress = extras.getString(C.MAIN_ACTIVITY_BUNDLE_KEY_ADRESA);
+		mUserModel = extras.getParcelable(C.MAIN_ACTIVITY_BUNDLE_KEY_USER);
 
 	}
 
 	private void setTitleTextView() {
-		mTitleIme.setText(textName);
-		mTitlePrezime.setText(textSurname);
-		mTitleAdresa.setText(textAdress);
+		mTitleIme.setText(mUserModel.getIme());
+		mTitlePrezime.setText(mUserModel.getPrezime());
+		mTitleAdresa.setText(mUserModel.getAdresa());
 	}
 
 	

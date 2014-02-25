@@ -1,6 +1,7 @@
 package biz.osvit.test1.activities;
 
 import biz.osvit.test1.activities.SecondActivity;
+import biz.osvit.test1.models.UserModel;
 import biz.osvit.test1.utils.C;
 
 import biz.osvit.test1.R;
@@ -47,7 +48,7 @@ public class MainActivity extends BaseActivity {
 		
 	}
 
-	private OnClickListener mClickListener = new OnClickListener() {
+	private OnClickListener mClickListener = new OnClickListener() { //zapakiran OnClickListener
 
 		@Override
 		public void onClick(View v) {
@@ -72,13 +73,16 @@ public class MainActivity extends BaseActivity {
 
 	};
 
+	
 	private void startSecondActivity(String ime, String prezime, String adresa) {
 		Intent namjera = new Intent(this, SecondActivity.class);
-		namjera.putExtra(C.MAIN_ACTIVITY_BUNDLE_KEY_IME, ime);
-		namjera.putExtra(C.MAIN_ACTIVITY_BUNDLE_KEY_PREZIME, prezime);
-		namjera.putExtra(C.MAIN_ACTIVITY_BUNDLE_KEY_ADRESA, adresa);
+		UserModel model = new UserModel();
+		model.setIme(ime);
+		model.setPrezime(prezime);
+		model.setAdresa(adresa);
+		namjera.putExtra(C.MAIN_ACTIVITY_BUNDLE_KEY_USER, model);
 		startActivity(namjera);
-
+		
 		finish();
 	}
 
